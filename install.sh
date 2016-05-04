@@ -1,14 +1,28 @@
 #!/bin/bash
-ln -s `pwd`/.vimrc ~/.vimrc
-ln -s `pwd`/.tmux.conf ~/.tmux.conf
+
+set -x
+
+MUNGEWRATH_HOME=`pwd`
+
+if [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    op='cp -f'
+else
+    op='ln -s'
+fi
+
+$($op `pwd`/.vimrc ~/.vimrc)
+$($op `pwd`/.tmux.conf ~/.tmux.conf)
+
 
 if [ -f ~/.bashrc ];
 then
     echo "bashrc exists - appending"
+    echo "MUNGEWRATH_HOME='$MUNGEWRATH_HOME'" >> ~/.bashrc
     cat .bashrc >> ~/.bashrc
 else
     echo "no bashrc present - creating"
     cp .bashrc ~/.bashrc
+    echo "MUNGEWRATH_HOME='$MUNGEWRATH_HOME'" >> ~/.bashrc
 fi
 
 echo "(hopefully) set up vimrc!"
