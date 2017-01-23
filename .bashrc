@@ -12,4 +12,7 @@ if [ -z "$TMUX" ]; then
     tmux attach -t base || tmux new -s base
 fi
 
+#Uncomment to enable terminal coloring
+#export PS1="\e[0;32m[MATTDEV \W]$ \e[m"
+
 # End Matthew Unrath configuration #
