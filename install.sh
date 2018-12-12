@@ -11,18 +11,21 @@ else
 fi
 
 $($op `pwd`/.vimrc ~/.vimrc)
+echo "(hopefully) set up vimrc!"
 $($op `pwd`/.tmux.conf ~/.tmux.conf)
 
 
 if [ -f ~/.bashrc ];
 then
     echo "bashrc exists - appending"
-    echo "MUNGEWRATH_HOME='$MUNGEWRATH_HOME'" >> ~/.bashrc
     cat .bashrc >> ~/.bashrc
 else
     echo "no bashrc present - creating"
     cp .bashrc ~/.bashrc
-    echo "MUNGEWRATH_HOME='$MUNGEWRATH_HOME'" >> ~/.bashrc
 fi
 
-echo "(hopefully) set up vimrc!"
+# Other Bash setup
+echo "MUNGEWRATH_HOME='$MUNGEWRATH_HOME'" >> ~/.bashrc
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
+echo "Setup completed!"
