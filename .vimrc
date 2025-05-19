@@ -7,3 +7,5 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType make setlocal nosmarttab noexpandtab
 autocmd BufRead,BufNewFile *.html.erb setlocal filetype=html
 runtime macros/matchit.vim
+syntax on
+filetype on
