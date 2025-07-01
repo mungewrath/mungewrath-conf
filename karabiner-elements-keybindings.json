@@ -1,12 +1,12 @@
 // Put these individually into the Complex Modifications section
 [
     {
-      "description": "6 to Cmd + W",
+      "description": "7 to Cmd + W",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "6"
+            "key_code": "7"
           },
           "to": [
             {
@@ -31,12 +31,12 @@
       ]
     },
     {
-      "description": "7 to Cmd + R",
+      "description": "6 to Cmd + R",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "7"
+            "key_code": "6"
           },
           "to": [
             {
