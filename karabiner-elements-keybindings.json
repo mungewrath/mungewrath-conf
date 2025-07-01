@@ -1,0 +1,155 @@
+// Put these individually into the Complex Modifications section
+[
+    {
+      "description": "6 to Cmd + W",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6"
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 80
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "7 to Cmd + R",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7"
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 80
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "5 to <back VS Code>",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5"
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 80
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "3 to <forward VS Code>",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3"
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 80
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "1 to <go to definition VS Code>",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1"
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "command",
+                "fn"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 80
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
